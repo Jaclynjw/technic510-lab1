@@ -20,7 +20,7 @@ with col1:
 
     <div class="profile-img">
 
-    ![](./image/profile.jpg)
+    ![](https://github.com/Jaclynjw/technic510-lab1/blob/main/image/profile.jpg)
     </div>
     """,
         unsafe_allow_html=True,
