@@ -20,7 +20,7 @@ with col1:
 
     <div class="profile-img">
 
-    ![](https://avatars.githubusercontent.com/u/7678108?v=4)
+    ![](./image/profile.jpg)
     </div>
     """,
         unsafe_allow_html=True,
