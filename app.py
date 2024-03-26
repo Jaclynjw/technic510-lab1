@@ -15,7 +15,7 @@ with col1:
     <style>
     .profile-img img {
         width: 100%;
-        border-radius: 50%;
+        border-radius: 20%;
     }
     </style>
 
@@ -32,7 +32,7 @@ with col2:
         """
     # Jiawen Chen (She/Her)
                 
-    - Master student at [Tsinghua University & UW](https://www.lighthouselabs.ca/)
+    - Master student at [Tsinghua University & UW](https://www.linkedin.com/in/jiawen-chen-43b7ab292/)
     - Vlogger at [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5ac5dceee8ac2b0ecbeab2e2?xhsshare=CopyLink&appuid=5ac5dceee8ac2b0ecbeab2e2&apptime=1711494076)
     """
     )
@@ -52,21 +52,21 @@ col1, col2, col3 = st.columns([0.3, 0.3, 0.3])
 with col1:
     st.markdown(
         f"""
-        <img src="path/to/hobby2.jpg" style="border-radius: 10px; width: 100%;">
+        <img src="https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo1.jpg?raw=true" style="border-radius: 10px; width: 100%;">
         """,
         unsafe_allow_html=True
     )
 with col2:
     st.markdown(
         f"""
-        <img src="path/to/hobby2.jpg" style="border-radius: 10px; width: 100%;">
+        <img src="https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo2.jpg?raw=true" style="border-radius: 10px; width: 100%;">
         """,
         unsafe_allow_html=True
     )   
 with col3:
     st.markdown(
         f"""
-        <img src="path/to/hobby2.jpg" style="border-radius: 10px; width: 100%;">
+        <img src="https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo3.jpg?raw=true" style="border-radius: 10px; width: 100%;">
         """,
         unsafe_allow_html=True
     )
