@@ -1,12 +1,13 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Jiawen Chen - Student, Engineer, Vlogger",
+    page_title="Jiawen Chen - Student, Vlogger",
     page_icon="👨🏻‍💻",
     layout="centered",  # centered or wide
     initial_sidebar_state="auto",
 )
 
+#Profile Section
 col1, col2 = st.columns([0.3, 0.7])
 with col1:
     st.markdown(
@@ -29,69 +30,53 @@ with col1:
 with col2:
     st.markdown(
         """
-    # Ian Chen (He/Him)
+    # Jiawen Chen (She/Her)
                 
-    - Instructor at [Lighthouse Labs](https://www.lighthouselabs.ca/)
-    - Engineer at [Clio](https://www.clio.com/)
+    - Master student at [Tsinghua University & UW](https://www.lighthouselabs.ca/)
+    - Vlogger at [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5ac5dceee8ac2b0ecbeab2e2?xhsshare=CopyLink&appuid=5ac5dceee8ac2b0ecbeab2e2&apptime=1711494076)
     """
     )
 
-st.markdown(
-    """
-# Projects
-
-- [Project 1](https://www.google.com)
-- [Project 2](https://www.google.com)
-- [Project 3](https://www.google.com)
-"""
-)
-
-st.markdown(
-    """
-# Contact
+#Education Section
+st.markdown("## Education")
+st.markdown("""
+- BE @ Tsinghua University, 2018-2022
+- Dual MS @ University of Washington & Tsinghua University, 2022-Present
 """)
-col1, col2, col3 = st.columns(3)
 
-# Card with image and text
-for col in [col1, col2, col3]:
-    col.markdown(
-        """
-        <style>
-        .profile-img img {
-            width: 100%;
-            border-radius: 10%;
-        }
-        </style>
-
-        <div class="profile-img">
-
-        ![](https://avatars.githubusercontent.com/u/7678108?v=4)
-        </div>
+# About Me Section
+st.markdown("## About Me")
+st.markdown("### Coder | Singer | Vlogger | INFP")
+st.markdown("I enjoy coding, singing, photography and travelling. Here are some snapshots of my adventures.")
+col1, col2, col3 = st.columns([0.3, 0.3, 0.3])
+with col1:
+    st.markdown(
+        f"""
+        <img src="path/to/hobby2.jpg" style="border-radius: 10px; width: 100%;">
         """,
-        unsafe_allow_html=True,
+        unsafe_allow_html=True
+    )
+with col2:
+    st.markdown(
+        f"""
+        <img src="path/to/hobby2.jpg" style="border-radius: 10px; width: 100%;">
+        """,
+        unsafe_allow_html=True
+    )   
+with col3:
+    st.markdown(
+        f"""
+        <img src="path/to/hobby2.jpg" style="border-radius: 10px; width: 100%;">
+        """,
+        unsafe_allow_html=True
     )
 
-col1, col2, col3 = st.columns(3)
-
-# Card with image and text
-for col in [col1, col2, col3]:
-    col.markdown(
-        """
-        <style>
-        .profile-img img {
-            width: 100%;
-            border-radius: 10%;
-        }
-        </style>
-
-        <div class="profile-img">
-
-        ![](https://avatars.githubusercontent.com/u/7678108?v=4)
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
+# Contact
+st.markdown("## Contact")
+st.markdown("""
+- Email: [chenjw18@uw.edu]
+- LinkedIn: [https://www.linkedin.com/in/jiawen-chen-43b7ab292/] 
+""")
 
 ft = """
 <style>
