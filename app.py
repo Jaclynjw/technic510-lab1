@@ -1,83 +1,125 @@
 import streamlit as st
 
-# Set up the page configuration
 st.set_page_config(
     page_title="Jiawen Chen - Student, Vlogger",
     page_icon="👨🏻‍💻",
-    layout="centered",
+    layout="centered",  # centered or wide
     initial_sidebar_state="auto",
 )
 
-# Profile Section
+#Profile Section
 col1, col2 = st.columns([0.3, 0.7])
 with col1:
-    # Display the profile image with rounded corners
-    st.image("https://github.com/Jaclynjw/technic510-lab1/blob/main/image/profile.jpg?raw=true", width=200)
-
-with col2:
-    # Display the name, education, and vlogging info using modern font
     st.markdown(
         """
-        # Jiawen Chen (She/Her)
-        
-        - Master student at [Tsinghua University & UW](https://www.linkedin.com/in/jiawen-chen-43b7ab292/)
-        - Vlogger at [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5ac5dceee8ac2b0ecbeab2e2?xhsshare=CopyLink&appuid=5ac5dceee8ac2b0ecbeab2e2&apptime=1711494076)
-        """,
-        unsafe_allow_html=True,
-    )
-
-# Education Section
-st.markdown("## Education", unsafe_allow_html=True)
-st.markdown(
-    """
-    - BE @ Tsinghua University, 2018-2022
-    - Dual MS @ University of Washington & Tsinghua University, 2022-Present
-    """,
-    unsafe_allow_html=True,
-)
-
-# About Me Section
-st.markdown("## About Me", unsafe_allow_html=True)
-st.markdown("### Coder | Singer | Vlogger | INFP", unsafe_allow_html=True)
-st.markdown("I enjoy coding, singing, photography and travelling. Here are some snapshots of my adventures.", unsafe_allow_html=True)
-
-# Display images in columns with rounded corners
-col1, col2, col3 = st.columns([0.3, 0.3, 0.3])
-with col1:
-    st.image("https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo1.jpg?raw=true", caption="Photography", use_column_width=True)
-with col2:
-    st.image("https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo2.jpg?raw=true", caption="Hiking", use_column_width=True)  
-with col3:
-    st.image("https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo3.jpg?raw=true", caption="Coding Project", use_column_width=True)
-
-# Contact Information
-st.markdown("## Contact", unsafe_allow_html=True)
-st.markdown(
-    """
-    - Email: [chenjw18@uw.edu](mailto:chenjw18@uw.edu)
-    - LinkedIn: [Jiawen Chen](https://www.linkedin.com/in/jiawen-chen-43b7ab292/)
-    """,
-    unsafe_allow_html=True,
-)
-
-# Apply custom CSS to hide the Streamlit footer and adjust other styles
-st.markdown(
-    """
     <style>
-    /* Hide the Streamlit footer */
-    .main footer {visibility: hidden;}
-    
-    /* Additional custom styles */
-    body {
-        font-family: Arial, sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        font-family: Arial, sans-serif;
-    }
-    .stMarkdown p {
-        font-family: Arial, sans-serif;
+    .profile-img img {
+        width: 100%;
+        border-radius: 20%;
     }
     </style>
+
+    <div class="profile-img">
+
+    ![](https://github.com/Jaclynjw/technic510-lab1/blob/main/image/profile.jpg?raw=true)
+    </div>
     """,
-    unsafe_allow_html=True,
-)
+        unsafe_allow_html=True,
+    )
+    # st.image('https://avatars.githubusercontent.com/u/7678108?v=4')
+with col2:
+    st.markdown(
+        """
+    # Jiawen Chen (She/Her)
+                
+    - Master student at [Tsinghua University & UW](https://www.linkedin.com/in/jiawen-chen-43b7ab292/)
+    - Vlogger at [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5ac5dceee8ac2b0ecbeab2e2?xhsshare=CopyLink&appuid=5ac5dceee8ac2b0ecbeab2e2&apptime=1711494076)
+    """
+    )
+
+#Education Section
+st.markdown("## Education")
+st.markdown("""
+- BE @ Tsinghua University, 2018-2022
+- Dual MS @ University of Washington & Tsinghua University, 2022-Present
+""")
+
+# About Me Section
+st.markdown("## About Me")
+st.markdown("### Coder | Singer | Vlogger | INFP")
+st.markdown("I enjoy coding, singing, photography and travelling. Here are some snapshots of my adventures.")
+col1, col2, col3 = st.columns([0.3, 0.3, 0.3])
+with col1:
+    st.markdown(
+        f"""
+        <img src="https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo1.jpg?raw=true" style="border-radius: 10px; width: 100%;">
+        """,
+        unsafe_allow_html=True
+    )
+with col2:
+    st.markdown(
+        f"""
+        <img src="https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo2.jpg?raw=true" style="border-radius: 10px; width: 100%;">
+        """,
+        unsafe_allow_html=True
+    )   
+with col3:
+    st.markdown(
+        f"""
+        <img src="https://github.com/Jaclynjw/technic510-lab1/blob/main/image/photo3.jpg?raw=true" style="border-radius: 10px; width: 100%;">
+        """,
+        unsafe_allow_html=True
+    )
+
+# Contact
+st.markdown("## Contact")
+st.markdown("""
+- Email: [chenjw18@uw.edu]
+- LinkedIn: [https://www.linkedin.com/in/jiawen-chen-43b7ab292/] 
+""")
+
+ft = """
+<style>
+a:link , a:visited{
+color: #BFBFBF;  /* theme's text color hex code at 75 percent brightness*/
+background-color: transparent;
+text-decoration: none;
+}
+
+a:hover,  a:active {
+color: #0283C3; /* theme's primary color*/
+background-color: transparent;
+text-decoration: underline;
+}
+
+#page-container {
+  position: relative;
+  min-height: 10vh;
+}
+
+footer{
+    visibility:hidden;
+}
+
+.footer {
+position: relative;
+left: 0;
+top:230px;
+bottom: 0;
+width: 100%;
+background-color: transparent;
+color: #808080; /* theme's text color hex code at 50 percent brightness*/
+text-align: left; /* you can replace 'left' with 'center' or 'right' if you want*/
+}
+</style>
+
+<div id="page-container">
+
+<div class="footer">
+<p style='font-size: 0.875em;'>Made with <a style='display: inline; text-align: left;' href="https://streamlit.io/" target="_blank">Streamlit</a><br 'style= top:3px;'>
+with <img src="https://em-content.zobj.net/source/skype/289/red-heart_2764-fe0f.png" alt="heart" height= "10"/><a style='display: inline; text-align: left;' href="https://github.com/sape94" target="_blank"> by sape94</a></p>
+</div>
+
+</div>
+"""
+st.write(ft, unsafe_allow_html=True)
