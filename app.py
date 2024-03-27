@@ -46,7 +46,7 @@ st.markdown("""
 
 # About Me Section
 st.markdown("## About Me")
-st.markdown("### Coder | Singer | Vlogger | INFP")
+st.markdown("#### Coder | Singer | Vlogger | INFP")
 st.markdown("I enjoy coding, singing, photography and travelling. Here are some snapshots of my adventures.")
 col1, col2, col3 = st.columns([0.3, 0.3, 0.3])
 with col1:
@@ -70,6 +70,22 @@ with col3:
         """,
         unsafe_allow_html=True
     )
+
+# Technical Skills Section
+st.markdown("## Technical Skills")
+st.markdown("""
+- Languages and Databases: C, C++, Python, SQL, Verilog HDL
+- Libraries and Frameworks: NumPy, Pandas, Keras, Tensorflow, Scikit-Learn, Pytorch
+- Software and Tools: MATLAB, Git, MySQL, Jupyter Notebook, Multisim, Quartus
+""")
+
+# Activities Section
+st.markdown("## Activities")
+st.markdown("""
+- Asia Pacific Entrepreneurs Association member
+- Web3 Art Brand "X" Co-Founder
+- February 2021-June 2022: President of Student Union of Weiyang College in Tsinghua University, leading 6 departments and more than 100 people
+""")
 
 # Contact
 st.markdown("## Contact")
